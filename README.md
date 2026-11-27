@@ -6,14 +6,10 @@ Customize the contents of the native Strapi sidebar to fit your workflow. Create
 
 The adapter targets Strapi 5.60.x through 5.62.x with Vite. See Verification for the exact versions tested. The sidebar is an internal Strapi component, so each new version requires validation.
 
-Pack the plugin from this repository, then install the tarball in the Strapi application.
+Once the first release is available on npm, run this command from your Strapi application directory.
 
 ```sh
-# In the plugin repository
-npm pack
-
-# In the Strapi application (replace the path with the tarball location)
-npm install /path/to/3xweb-strapi-plugin-content-manager-sidebar-0.1.0.tgz
+npm install @3xweb/strapi-plugin-content-manager-sidebar
 ```
 
 Wrap your existing Vite configuration as shown below.
@@ -53,11 +49,17 @@ Select the circular arrow and confirm **Restore default order**. The reset clear
 
 The arrangement is stored in the current browser profile and scoped to the Strapi instance. It survives navigation and reloads. Group names and content-type identifiers are kept in browser storage. Admin accounts using the same browser profile and Strapi instance share this arrangement. Use separate browser profiles for independent arrangements. New visible types appear at the end of a custom layout, and native access permissions continue to determine which content links are visible.
 
-Remove the Vite wrapper and rebuild the admin to restore the standard Strapi sidebar.
+## Uninstall
+
+Remove the wrapper import and call from your Vite configuration. Then uninstall the package and rebuild the Strapi admin.
+
+```sh
+npm uninstall @3xweb/strapi-plugin-content-manager-sidebar
+```
 
 ## Verification
 
-- The local npm tarball was installed in an isolated project. The package entry point and the organizer module loaded from the installed package.
+- The package entry point and organizer module loaded after a local installation test in an isolated project.
 - The compact organizer was checked in Strapi 5.60.0. Dragging the Campaigns row onto a closed Editorial group moved it into the group. Dragging the Homepage row onto the group produced a mixed group, which survived a reload.
 
 - Browser testing used Strapi 5.60.0, Node 22.22.3, and SQLite. The admin was built with `strapi build` (Vite) and served with `strapi start`. With sample data, the **Inside** control grouped Articles and Homepage together and put Products in a separate group. Dragging Homepage before Articles reordered the mixed group. The **Before** control also reordered its items. The saved order persisted through navigation from the article list to an entry and back, and after reloading.
