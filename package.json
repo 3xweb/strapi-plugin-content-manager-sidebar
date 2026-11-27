@@ -1,0 +1,36 @@
+{
+  "name": "@3xweb/strapi-plugin-content-manager-sidebar",
+  "version": "0.1.0",
+  "description": "Group and reorder content types in the native Strapi Content Manager sidebar.",
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "types": "./index.d.cts",
+      "default": "./index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.cjs",
+    "index.d.cts",
+    "sidebar.mjs"
+  ],
+  "scripts": {
+    "test": "node sidebar.test.mjs && node integration.test.cjs"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": ">=5.60.0 <5.63.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3xweb/strapi-plugin-content-manager-sidebar.git"
+  },
+  "homepage": "https://github.com/3xweb/strapi-plugin-content-manager-sidebar#readme",
+  "bugs": {
+    "url": "https://github.com/3xweb/strapi-plugin-content-manager-sidebar/issues"
+  }
+}
