@@ -41,13 +41,19 @@ In **Content Manager**, select the gear next to the content types heading. The o
 
 ![Organize mode with dashed drop areas and an Editorial group containing Campaigns and Homepage](https://raw.githubusercontent.com/3xweb/strapi-plugin-content-manager-sidebar/main/docs/images/organize-sidebar.jpg)
 
+### Remove default groups and place new content types
+
+In **Organize**, move all items out of **Collection Types** or **Single Types**, then select the trash icon to remove the empty group. **Restore default order** brings both default groups back.
+
+With a custom layout, newly created content types that you have permission to see appear at the bottom of the sidebar, outside any group. Deleted default groups stay deleted. Open **Organize** to move a new type into any group. Adding an entry to an existing type, such as a new article, leaves the sidebar layout as it is.
+
 ### Restore the default order
 
 Select the circular arrow and confirm **Restore default order**. The reset clears your custom sidebar groups and order. Your content stays intact. Select **Cancel** to keep your arrangement.
 
 ![Strapi confirmation dialog with Cancel and Restore default order](https://raw.githubusercontent.com/3xweb/strapi-plugin-content-manager-sidebar/main/docs/images/confirm-reset.jpg)
 
-The arrangement is stored in the current browser profile and scoped to the Strapi instance. It survives navigation and reloads. Group names and content-type identifiers are kept in browser storage. Admin accounts using the same browser profile and Strapi instance share this arrangement. Use separate browser profiles for independent arrangements. New visible types appear at the end of a custom layout, and native access permissions continue to determine which content links are visible.
+The arrangement is stored in the current browser profile and scoped to the Strapi instance. It survives navigation and reloads. Group names and content-type identifiers are kept in browser storage. Admin accounts using the same browser profile and Strapi instance share this arrangement. Use separate browser profiles for independent arrangements. Native access permissions determine which content links are visible.
 
 ## Uninstall
 
