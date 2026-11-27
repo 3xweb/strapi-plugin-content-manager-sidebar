@@ -72,3 +72,7 @@ npm uninstall @3xweb/strapi-plugin-content-manager-sidebar
 - A Reader role with read access only to Articles saw only the Articles link. The group containing Products stayed visible in organize mode and offered no **Remove group** control. Before the confirmation dialog was added, resetting as Reader restored the native sections after a reload. The current dialog was verified by keyboard on Strapi 5.60.0. Cancel kept the custom layout, and confirmation restored the default layout.
 - The native sidebar source transformation and JavaScript syntax checks passed on Strapi 5.60.0 and 5.62.0 in the November 2026 validation. The adapter had also previously passed the source check on 5.61.1.
 - `npm test` covers mixed groups, reordering, permission-filtered links, and protection against removing a group that still holds entries hidden by native permissions. Set `STRAPI_FIXTURES` to a colon-separated list of installed Strapi application directories to include the source transformation checks.
+
+## Report an issue
+
+Open a [GitHub issue](https://github.com/3xweb/strapi-plugin-content-manager-sidebar/issues) with your Strapi version, plugin version, and steps to reproduce the problem.
